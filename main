@@ -1,0 +1,28 @@
+data = dict()
+data['Nome'] = str(input('Nome do jogador: '))
+data['partida'] = int(input(f'Quantas partidas {data["Nome"]} jogou? '))
+data['gols'] = []
+for i in range(data['partida']):
+    data['gols'].append(int(input(f'Quantos gols na partida {i}? ')))
+print('-='*30)
+data['total'] = sum(data['gols'])
+#data.pop('partida')
+print(data)
+print('-='*30)
+for i, c in data.items():
+    print(f'O campo {i} tem o valor {c} ')
+print('-='*30)
+print(f'O jogador {data["Nome"]} jogou {data["partida"]} partidas')
+for x, z in enumerate(data['gols']):
+    print(f'=> Na partida {x}, fez {z} gols.')
+
+
+
+
+
+
+
+
+
+
+
